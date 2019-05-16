@@ -27,7 +27,7 @@
         <td>{{ employee.email }}</td>
         <td>{{ employee.phone }}</td>
         <td>
-          <a href="#" class="btn btn-warning text-light">Edit</a>&nbsp;
+          <a routerLink="/employee-edit/{{employee.id}}" class="btn btn-warning text-light">Edit</a>&nbsp;
           <a href="#" class="btn btn-danger text-light">Delete</a>
         </td>
       </tr>
