@@ -42,4 +42,9 @@ export class RestApiService {
     return this.http.put<Employee>(this.apiURL + "employees/"+id, JSON.stringify(employeee), this.httpOptions) 
   }
 
+  // Delete Employee with Method DELETE
+  deleteEmployee(id){
+    return this.http.delete<Employee>(this.apiURL + "employees/"+id,  this.httpOptions)
+  }
+
 }

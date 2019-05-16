@@ -14,10 +14,22 @@ export class HomeComponent implements OnInit {
   constructor(public restApi: RestApiService) { }
 
   ngOnInit() {
+    this.loadEmployee()
+  }
+
+  loadEmployee(){
     this.restApi.getEmployees().subscribe((data: {})=>{
       //console.log(data);
       this.dataEmployee = data
     })
+  }
+
+  deleteEmployee(id){
+    if(window.confirm('Are you sure, to delete this record?')){
+      this.restApi.deleteEmployee(id).subscribe((data: {})=>{
+        this.loadEmployee()
+      });
+    }
   }
 
 }
