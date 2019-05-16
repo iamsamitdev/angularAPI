@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
+// HTTP Module
+import { HttpClientModule } from '@angular/common/http';
+
 // Reactive Form and Form Module
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
@@ -15,6 +18,9 @@ import { RegisterComponent } from './register/register.component';
 // Service
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
+import { EmployeeCreateComponent } from './employee-create/employee-create.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +28,17 @@ import { AuthGuard } from './auth.guard';
     LoginComponent,
     HomeComponent,
     NavComponent,
-    RegisterComponent
+    RegisterComponent,
+    EmployeeCreateComponent,
+    EmployeeDetailsComponent,
+    EmployeeUpdateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
