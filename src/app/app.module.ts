@@ -22,6 +22,8 @@ import { EmployeeCreateComponent } from './employee-create/employee-create.compo
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 
+//import {LocationStrategy,  PathLocationStrategy} from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
